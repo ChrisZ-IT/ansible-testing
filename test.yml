@@ -14,4 +14,4 @@
     delegate_to: localhost
 
   - debug:
-      msg: "Hello: {{ ansible_facts }}"
+      msg: "{{ ansible_facts }}"
