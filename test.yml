@@ -13,5 +13,5 @@
   #   delegate_to: localhost
 
   - debug:
-      msg: "{{ ansible_facts }}"
-    when: (ansible_facts["ansible_hostname"] in groups['kubernetes'])
+      var: "{{ ansible_facts }}"
+    when: (aansible_facts.ansible_hostname in groups['kubernetes'])
