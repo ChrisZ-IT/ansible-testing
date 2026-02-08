@@ -14,4 +14,4 @@
 
   - debug:
       var: "{{ ansible_facts }}"
-    when: (aansible_facts.ansible_hostname in groups['kubernetes'])
+    when: (ansible_facts.ansible_hostname in groups['kubernetes'])
