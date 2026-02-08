@@ -14,4 +14,4 @@
 
   - debug:
       msg: "{{ ansible_facts }}"
-    when: ansible_hostname in groups[‘kubernetes’]
+    when: (ansible_hostname in groups['kubernetes'])
