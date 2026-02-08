@@ -4,14 +4,13 @@
   # connection: local
   gather_facts: true
   tasks:
+  # - debug:
+  #     msg: "Hello: {{ ansible_facts.fqdn }}"
 
-  - debug:
-      msg: "Hello: {{ ansible_facts.fqdn }}"
-
-  - name: Sleep for 15 seconds and continue with play
-    ansible.builtin.wait_for:
-      timeout: 15
-    delegate_to: localhost
+  # - name: Sleep for 15 seconds and continue with play
+  #   ansible.builtin.wait_for:
+  #     timeout: 15
+  #   delegate_to: localhost
 
   - debug:
       msg: "{{ ansible_facts }}"
