@@ -1,17 +1,8 @@
 ---
 - name: Testing AAP
   hosts: all
-  # connection: local
   gather_facts: true
   tasks:
-  # - debug:
-  #     msg: "Hello: {{ ansible_facts.fqdn }}"
-
-  # - name: Sleep for 15 seconds and continue with play
-  #   ansible.builtin.wait_for:
-  #     timeout: 15
-  #   delegate_to: localhost
-
   - debug:
-      var: "{{ ansible_facts }}"
-    when: (ansible_facts.ansible_hostname in groups['kubernetes'])
+      msg: "{{ ansible_facts }}"
+    when: ansible_facts["hostname"] in groups["kubernetes"]
